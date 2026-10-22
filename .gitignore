@@ -3,3 +3,6 @@ ckpt/
 merged/
 *.gguf
 .vscode/
+adapter/
+merged_model/
+mlx_4bit/
