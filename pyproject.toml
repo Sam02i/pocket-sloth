@@ -1,0 +1,8 @@
+[project]
+name = "pocket-sloth"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "tinker>=0.35.0",
+    "tinker-cookbook>=0.5.8",
+]
