@@ -2,3 +2,4 @@
 ckpt/
 merged/
 *.gguf
+.vscode/
