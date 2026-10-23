@@ -40,7 +40,7 @@ The `merchant` field holds the clean, everyday name a person would say out loud.
 
 1. **Remove the noise.** Delete reference numbers, order IDs, asterisks, branch codes, and legal endings like PVT LTD, LTD, PAYMENTS.
 2. **Use the brand name in Title Case.** Expand short codes to the brand people know (`AMZN` becomes Amazon).
-3. **Never invent a brand.** If a messy string can't be identified, clean it lightly and keep it (`XYZ TRDRS 22` becomes `Xyz Trdrs`). If the message has no merchant at all, use `null`.
+3. **Never invent a brand.** If a messy string can't be identified, clean it lightly and keep it (`XYZ TRDRS 22` becomes `Xyz Trdrs`). If the message shows no merchant at all, use the bank name shown (for example `Maple Bank`) and the category **Other**.
 4. **Payments to people.** Keep the name as written in the message, in Title Case (made-up names only).
 5. **One spelling per merchant.** The merchant dictionary in `gen/templates.py` is the single source of spellings.
 
@@ -98,6 +98,7 @@ If it is unclear whether an Amazon Pay message is a purchase or a wallet top-up,
 2. **Credits go to Income & Refunds**, except person-to-person money received and self-transfer credits, which go to **Transfers**.
 3. **When the message gives no clue, use Other.** Never guess a category from a vague merchant name.
 4. **Transport vs Travel.** Transport is for everyday trips. Travel is for booked trips (flights, trains, hotels).
+5. **Generic shop names** (for example `KIRANA STORE 12`) go to **Other**, because the name could be any kind of shop.
 
 ## 4. Special cases
 
@@ -107,7 +108,9 @@ If it is unclear whether an Amazon Pay message is a purchase or a wallet top-up,
 4. **Self-transfers.** If the message clearly says it is your own account or wallet: `debit` on the sending side, `credit` on the receiving side, `merchant: "Self Transfer"`, `category: "Transfers"`. If it is not clear, treat it as a person-to-person payment.
 5. **Fees and charges** (SMS charges, annual card fee, penalty). `debit`, `Bills & Utilities`, `merchant` is the bank or card name if shown, otherwise `null`.
 6. **Interest and cashback received.** `credit`, `Income & Refunds`.
-7. **Standing instructions and EMIs.** Real debits, so they count. EMIs go to `Bills & Utilities`.
+7. **Standing instructions and EMIs.** Real debits, so they count. EMIs go to `Bills & Utilities`. The merchant is the lender or bank if the message names one, and `null` if no lender is named.
+8. **Salary and other credits from a business.** `credit`, `Income & Refunds`, and the merchant is the employer or sender name as shown (for example `Orchid Tech`).
+9. **Foreign currency.** Use the currency code the message shows (for example `USD`) and copy the amount as shown (`12.99`). The category follows the merchant as usual.
 
 ## 5. What counts as not-a-transaction
 
