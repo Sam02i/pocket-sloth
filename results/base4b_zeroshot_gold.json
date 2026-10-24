@@ -1,0 +1,110 @@
+{
+  "ALL": {
+    "n": 102,
+    "json_valid": 1.0,
+    "row_accuracy": 0.7647058823529411,
+    "objective_row_accuracy": 0.9901960784313726,
+    "txn_precision": 1.0,
+    "txn_recall": 1.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": 0.7662337662337663,
+      "amount": 1.0,
+      "currency": 1.0,
+      "direction": 0.987012987012987,
+      "date": 1.0,
+      "category": 0.8961038961038961
+    }
+  },
+  "seen": {
+    "n": 20,
+    "json_valid": 1.0,
+    "row_accuracy": 0.7,
+    "objective_row_accuracy": 1.0,
+    "txn_precision": 1.0,
+    "txn_recall": 1.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": 0.8,
+      "amount": 1.0,
+      "currency": 1.0,
+      "direction": 1.0,
+      "date": 1.0,
+      "category": 0.9
+    }
+  },
+  "noisy": {
+    "n": 21,
+    "json_valid": 1.0,
+    "row_accuracy": 0.47619047619047616,
+    "objective_row_accuracy": 0.9523809523809523,
+    "txn_precision": 1.0,
+    "txn_recall": 1.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": 0.6190476190476191,
+      "amount": 1.0,
+      "currency": 1.0,
+      "direction": 0.9523809523809523,
+      "date": 1.0,
+      "category": 0.8095238095238095
+    }
+  },
+  "hinglish": {
+    "n": 15,
+    "json_valid": 1.0,
+    "row_accuracy": 0.8,
+    "objective_row_accuracy": 1.0,
+    "txn_precision": 1.0,
+    "txn_recall": 1.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": 0.8333333333333334,
+      "amount": 1.0,
+      "currency": 1.0,
+      "direction": 1.0,
+      "date": 1.0,
+      "category": 0.9166666666666666
+    }
+  },
+  "not_txn": {
+    "n": 20,
+    "json_valid": 1.0,
+    "row_accuracy": 1.0,
+    "objective_row_accuracy": 1.0,
+    "txn_precision": 0.0,
+    "txn_recall": 0.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": null,
+      "amount": null,
+      "currency": null,
+      "direction": null,
+      "date": null,
+      "category": null
+    }
+  },
+  "unseen": {
+    "n": 26,
+    "json_valid": 1.0,
+    "row_accuracy": 0.8461538461538461,
+    "objective_row_accuracy": 1.0,
+    "txn_precision": 1.0,
+    "txn_recall": 1.0,
+    "false_positives": 0,
+    "missed_transactions": 0,
+    "field_accuracy": {
+      "merchant": 0.8333333333333334,
+      "amount": 1.0,
+      "currency": 1.0,
+      "direction": 1.0,
+      "date": 1.0,
+      "category": 0.9583333333333334
+    }
+  }
+}
