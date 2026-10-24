@@ -12,7 +12,10 @@ OBJECTIVE = ["amount", "currency", "direction", "date"]
 
 def same(field, p, g):
     if field == "amount":
-        return p is not None and g is not None and abs(float(p) - float(g)) < 0.005
+        try:
+            return abs(float(p) - float(g)) < 0.005
+        except (TypeError, ValueError):
+            return False
     return p == g
 
 
