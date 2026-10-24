@@ -1,0 +1,63 @@
+{
+  "note": "Which formats, merchants, people and employers go in which set. Gold uses the unseen formats, which never appear in train or dev.",
+  "formats": {
+    "train_and_dev": [
+      "Maple Bank (A/c style)",
+      "Banyan Bank (card style)",
+      "Lotus Pay UPI",
+      "Cedar Card",
+      "Amazon Pay / Google Pay / PhonePe / Paytm rails",
+      "Hinglish phrasings"
+    ],
+    "gold_seen_slice": "same six training formats as above, different messages",
+    "gold_only_unseen": [
+      "Teak Bank",
+      "Willow Co-op",
+      "Juniper Payments",
+      "Aspen SFB"
+    ]
+  },
+  "held_out_from_training": {
+    "merchants": [
+      "Cleartrip",
+      "Inox Movies",
+      "Reliance Fresh",
+      "Dr Mehta Clinic",
+      "Kirana Store",
+      "Wellness Forever",
+      "Mahanagar Gas",
+      "Tata Power",
+      "Cafe Coffee Day",
+      "Xyz Trdrs",
+      "Chai Sutta Bar"
+    ],
+    "people": [
+      "Arjun P",
+      "Sana R",
+      "Meera K",
+      "Ishaan T",
+      "Tara S",
+      "Rahul"
+    ],
+    "employers": [
+      "Orchid Tech",
+      "Birch Software"
+    ]
+  },
+  "merchant_overlap_policy": "Common brands (Swiggy, Amazon, Uber...) appear in both train and gold. Only the unseen-format slice is leakage-controlled by format; the long-tail merchants above are held out entirely.",
+  "dedupe_rule": "Lowercase, digits masked. A seed is dropped if its masked text matches any gold or dev message or another seed.",
+  "seed_counts_by_family": {
+    "banyan": 472,
+    "non_txn": 260,
+    "cedar": 363,
+    "maple": 645,
+    "lotus": 353,
+    "hinglish": 157,
+    "rail": 150
+  },
+  "seed_generator": {
+    "file": "gen/templates.py",
+    "seed": 7,
+    "n": 2400
+  }
+}
