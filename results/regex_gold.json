@@ -1,0 +1,110 @@
+    {
+    "ALL": {
+        "n": 102,
+        "json_valid": 1.0,
+        "row_accuracy": 0.6372549019607843,
+        "objective_row_accuracy": 0.696078431372549,
+        "txn_precision": 1.0,
+        "txn_recall": 0.5974025974025974,
+        "false_positives": 0,
+        "missed_transactions": 31,
+        "field_accuracy": {
+        "merchant": 0.5584415584415584,
+        "amount": 0.5974025974025974,
+        "currency": 0.5974025974025974,
+        "direction": 0.5974025974025974,
+        "date": 0.5974025974025974,
+        "category": 0.5194805194805194
+        }
+    },
+    "seen": {
+        "n": 20,
+        "json_valid": 1.0,
+        "row_accuracy": 0.95,
+        "objective_row_accuracy": 0.95,
+        "txn_precision": 1.0,
+        "txn_recall": 0.95,
+        "false_positives": 0,
+        "missed_transactions": 1,
+        "field_accuracy": {
+        "merchant": 0.95,
+        "amount": 0.95,
+        "currency": 0.95,
+        "direction": 0.95,
+        "date": 0.95,
+        "category": 0.95
+        }
+    },
+    "noisy": {
+        "n": 21,
+        "json_valid": 1.0,
+        "row_accuracy": 0.8095238095238095,
+        "objective_row_accuracy": 0.9523809523809523,
+        "txn_precision": 1.0,
+        "txn_recall": 0.9523809523809523,
+        "false_positives": 0,
+        "missed_transactions": 1,
+        "field_accuracy": {
+        "merchant": 0.9047619047619048,
+        "amount": 0.9523809523809523,
+        "currency": 0.9523809523809523,
+        "direction": 0.9523809523809523,
+        "date": 0.9523809523809523,
+        "category": 0.8095238095238095
+        }
+    },
+    "hinglish": {
+        "n": 15,
+        "json_valid": 1.0,
+        "row_accuracy": 0.4666666666666667,
+        "objective_row_accuracy": 0.6666666666666666,
+        "txn_precision": 1.0,
+        "txn_recall": 0.5833333333333334,
+        "false_positives": 0,
+        "missed_transactions": 5,
+        "field_accuracy": {
+        "merchant": 0.4166666666666667,
+        "amount": 0.5833333333333334,
+        "currency": 0.5833333333333334,
+        "direction": 0.5833333333333334,
+        "date": 0.5833333333333334,
+        "category": 0.3333333333333333
+        }
+    },
+    "not_txn": {
+        "n": 20,
+        "json_valid": 1.0,
+        "row_accuracy": 1.0,
+        "objective_row_accuracy": 1.0,
+        "txn_precision": 0.0,
+        "txn_recall": 0.0,
+        "false_positives": 0,
+        "missed_transactions": 0,
+        "field_accuracy": {
+        "merchant": null,
+        "amount": null,
+        "currency": null,
+        "direction": null,
+        "date": null,
+        "category": null
+        }
+    },
+    "unseen": {
+        "n": 26,
+        "json_valid": 1.0,
+        "row_accuracy": 0.07692307692307693,
+        "objective_row_accuracy": 0.07692307692307693,
+        "txn_precision": 0.0,
+        "txn_recall": 0.0,
+        "false_positives": 0,
+        "missed_transactions": 24,
+        "field_accuracy": {
+        "merchant": 0.0,
+        "amount": 0.0,
+        "currency": 0.0,
+        "direction": 0.0,
+        "date": 0.0,
+        "category": 0.0
+        }
+        }
+    }
